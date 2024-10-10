@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+/* html{
+    height: 100%;
+    width: 100%;
+} */
+body{
+    /* height: 100%;
+    width: 100%; */
+    padding: 0;
+    margin: 0;
+    background-image: url('assets/images/background.jpg');
+    background-size: cover;
+}
+/* #background{
+    background-image: url('assets/images/background.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    opacity: .80;
+} */
