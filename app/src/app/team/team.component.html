@@ -1,0 +1,9 @@
+<div class='container'>
+    <div class = 'inside_container'>
+        <h1>{{team.team_name}}</h1>
+        @for (p of team.team; track $index){
+            <app-player [player]=p></app-player>
+        }
+    </div>
+</div>
+

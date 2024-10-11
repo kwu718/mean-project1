@@ -1,0 +1,18 @@
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.inside_container{
+    margin-top: 10px;
+    border-radius: 25px;
+    text-align:center;
+    background-color: rgb(237, 143, 2);
+}
+div{
+    font-size: 23px;
+    padding: 5px;
+}

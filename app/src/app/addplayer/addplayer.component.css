@@ -1,0 +1,28 @@
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.inside_container{
+    margin-top: 10px;
+    border-radius: 25px;
+    text-align:center;
+    background-color: rgb(237, 143, 2);
+}
+h1{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+label{
+    display: block;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

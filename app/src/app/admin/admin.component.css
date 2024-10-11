@@ -1,0 +1,25 @@
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.inside_container{
+    margin-top: 10px;
+    border-radius: 25px;
+    text-align:center;
+    background-color: rgb(237, 143, 2);
+}
+
+.addPlayers{
+    
+    float:right;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: bisque;
+    margin-top:-250px;
+
+}
