@@ -1,20 +1,30 @@
+require('dotenv').config();
+const express = require('express');
+const app = express();
+const cors = require('cors');
+
 import { AppDataSource } from "./data-source"
-import { Player } from "./entity/Player"
 
 AppDataSource.initialize().then(async () => {
-
-    console.log("Inserting a new user into the database...")
-    const player = new Player()
-    player.firstName = "Timber"
-    player.lastName = "Saw"
-    player.age = 25
-    await AppDataSource.manager.save(player)
-    console.log("Saved a new user with id: " + player.id)
-
-    console.log("Loading users from the database...")
-    const users = await AppDataSource.manager.find(Player)
-    console.log("Loaded users: ", users)
-
-    console.log("Here you can setup and run express / fastify / any other framework.")
-
+    console.log('Data Source has been intialized')
 }).catch(error => console.log(error))
+
+app.use(cors({origin: process.env.CORS_WHITELIST}));
+app.use(express.json())
+const port = process.env.PORT;
+
+
+const teamController = require('./controller/team-controller');
+app.use('/teams', teamController);
+
+const coachController = require('./controller/coach-controller');
+app.use('/coaches', coachController);
+
+const playerController = require('./controller/player-controller');
+app.use('/players', playerController);
+
+
+app.listen(port, () => {
+    console.log(`My first Express app is up and running on port ${port}!`);
+});
+
