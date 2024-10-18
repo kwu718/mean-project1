@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Coach } from '../models/coach';
 
 @Component({
   selector: 'app-coach',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './coach.component.css'
 })
 export class CoachComponent {
-
+  @Input() coach: Coach = new Coach('', '');
 }

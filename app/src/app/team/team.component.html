@@ -1,9 +1,14 @@
-<div class='container'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ <div class='container'>
     <div class = 'inside_container'>
-        <h1>{{team.team_name}}</h1>
-        @for (p of team.team; track $index){
-            <app-player [player]=p></app-player>
-        }
-    </div>
+        <h2>{{team.teamName}} <i (click)='deleteTeam()' style="font-size:24px;color:red" class="fa">&#xf014;</i></h2>
+        <div class="dropdown-content">
+            <app-coach [coach]=team.coach></app-coach>
+            Players
+            @for(p of team.players; track $index){
+            <app-player (deletePlayerEvent)="deletePlayer($event)" [player]=p></app-player>
+            }
+        </div>
+     </div>
 </div>
 

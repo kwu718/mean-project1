@@ -16,3 +16,14 @@ div{
     font-size: 23px;
     padding: 5px;
 }
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,10 +1,17 @@
-@for (t of teams; track $index){
-    <div class='container'>
-        <div class = 'inside_container'>
-            <app-team [team]=t></app-team>
-        </div>
-    </div>
-}
-<div class="addPlayers">
-Add Players
+<div class="outside">
+    <span class="container">
+    @for (t of teams; track $index){
+            <div class ='inside_container' (click)="reroute()">
+                <app-team [team]=t (deleteTeamEvent)="deleteTeam($event)"></app-team>
+            </div>
+    }
+    </span>
+    <span class="addPlayers">
+        <h2>Add Player To Team</h2>
+        @for (p of players; track $index){
+            <app-player (deletePlayerEvent)="deletePlayer($event)" 
+            [player]=p></app-player>
+        }
+    </span>
 </div>
+

@@ -1,4 +1,41 @@
-div{
-    font-size: 30px;
-    padding: 5px;
+.container{
+    font-size: 20px;
+    /* border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; */
+    border-radius:5px;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    text-align: center;
+}
+#add{
+    color: rgb(30, 198, 89);
+}
+.teams_container{
+    display: none;
+}
+.container:hover .teams_container{
+    text-align: center;
+    width: 100%;
+    border-style: solid;
+    background-color:wheat;
+    display: block;
+    height: 75px;
+    overflow: auto;
+    transform:scale(1);
+}
+.teams{
+    border-style: inset;
+    border-width: thin;
+}
+#edit{
+    margin-left: 5px;
+    float: left;
+    padding-top: 3.5px;
+
+}
+#remove{
+    margin-right: 5px;
+    float: right;
+    padding-top: 3.5px;
 }

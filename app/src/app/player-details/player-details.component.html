@@ -1,9 +1,37 @@
 <div class='container'>
     <div class = 'inside_container'>
-        <h1>Player Info</h1>
-        <div>Name: {{player.first_name}} {{player.last_name}}</div>
+        <h2>Player Info</h2>
+        <div>Name: {{player.firstName}} {{player.lastName}}</div>
         <div>Age: {{player.age}}</div>
-        <div>Height: {{player.feet}}'{{player.inches}}"</div>
+        <div>Height: {{player.height_feet}}'{{player.height_inch}}"</div>
         <div>Contact Info: {{player.email}}</div>
+        <div>Team: {{team}}</div>
+    </div>
+    <div></div>
+    <div class ='inside_container'>
+        <form id="update">
+            <h2>Update Player</h2>
+    
+            <label for="playerFirstNameUpdate">Player First Name</label>
+            <input type="text" name="playerFirstNameUpdate" id="playerFirstNameUpdate" [(ngModel)]="playerFirstNameUpdate">
+
+            <label for="playerLastNameUpdate">Player Last Name</label>
+            <input type="text" name="playerLastNameUpdate" id="playerLastNameUpdate" [(ngModel)]="playerLastNameUpdate">
+    
+            <label for="ageUpdate">Age</label>
+            <input type="number" name="ageUpdate" id="ageUpdate" [(ngModel)]="ageUpdate">
+    
+            <label for="heightFeetUpdate">Feet</label>
+            <input type="number" name="heightFeetUpdate" id="heightFeetUpdate" [(ngModel)]="heightFeetUpdate">
+            
+            <label for="heightInchUpdate">Inch</label>
+            <input type="number" name="heightInchUpdate" id="heightInchUpdate" [(ngModel)]="heightInchUpdate">
+
+            <label for="emailUpdate">Email</label>
+            <input type="email" name="emailUpdate" id="emailUpdate" [(ngModel)]="emailUpdate">
+
+    
+            <button type="button" (click)="updatePlayer()">UPDATE</button>
+        </form>
     </div>
 </div>

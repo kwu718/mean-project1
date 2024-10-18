@@ -1,5 +1,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div (click)="showDetails()">{{player.first_name}} {{player.last_name}} 
-    <i style="font-size:24px;color:red" class="fa">&#xf014;</i>
+<div class="container">
+    <i (click)="showDetails()" id="edit" style="font-size:16px" class="fa">&#xf013;</i><span class="player"(click)="showDetails()">{{player.firstName}} {{player.lastName}} </span>
+    <i (click)="deletePlayer()" id= "remove" style="font-size:16px;color:red" class="fa">&#xf014;</i>
+    <div class ="teams_container">
+    @for(t of teams; track $index){
+        <div class="teams" (click)='addToTeam(t.id)'>{{t.teamName}}</div>
+    }
+    </div>
 </div>

@@ -1,0 +1,30 @@
+
+h2 {
+    padding: 5px;
+    font-size: 20px;
+}
+label{
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+section {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 13px;
+    height: 20px;
+    width: 100%;
+}
+
+#update {
+    float: right;
+}

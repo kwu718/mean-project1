@@ -1,20 +1,5 @@
 <div class='container'>
     <div class = 'inside_container'>
-        <form>
-            <h1>Create New Player</h1>
-            <label for="customerFirstName">First Name </label>
-            <input type="text" name="customerFirstName" id="customerFirstName">
-            <label for="customerLastName">Last Name </label>
-            <input type="text" name="customerLastName" id="customerLastName">
-            <label for="customerAge">Age </label>
-            <input type="text" name="customerAge" id="customerAge">
-            <label for="customerHeightFeet">Feet </label>
-            <input type="text" name="customerHeightFeet" id="customerHeightFeet">
-            <label for="customerHeightInches">Inches </label>
-            <input type="text" name="customerHeightInches" id="customerHeightInches">
-            <label for="customerEmail">Email </label>
-            <input type="text" name="customerEmail" id="customerEmail">
-            <button type="button">CREATE NEW</button>
-        </form>
+        <app-player-reactive-form (createPlayerEvent)="createPlayer($event)"></app-player-reactive-form>
     </div>
 </div>

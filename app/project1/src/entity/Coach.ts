@@ -13,6 +13,9 @@ export class Coach {
     @Column()
     lastName: string
 
-    @OneToOne(() => Team, (team) => team.coach)
+    @Column({nullable: true})
+    teamId: number
+    
+    @OneToOne(() => Team, (team) => team.coach, {eager: true})
     team: Team
 }

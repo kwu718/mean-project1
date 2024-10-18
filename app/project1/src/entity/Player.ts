@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne, JoinColumn } from "typeorm"
 import { Team } from "./Team"
 
 @Entity()
@@ -25,6 +25,9 @@ export class Player {
     @Column()
     email: string
 
-    @ManyToOne(() => Team, {nullable: true, eager: true})
+    @Column({nullable: true})
+    teamId: number
+
+    @ManyToOne(() => Team, (team) => team.players, {eager: true})
     team: Team
 }

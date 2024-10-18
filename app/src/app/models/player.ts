@@ -1,22 +1,25 @@
 export class Player {
-    first_name: string;
-    last_name: string;
-    age: number;
-    feet: number;
-    inches: number;
-    email: string;
 
-    constructor(first_name: string,
-        last_name: string,
+    id: number;
+    firstName: string;
+    lastName: string;
+    age: number;
+    height_feet: number;
+    height_inch: number;
+    email: string;
+    constructor(id: number,
+        firstName: string,
+        lastName: string,
         age: number,
-        feet: number,
-        inches: number,
+        height_feet: number,
+        height_inch: number,
         email: string){
-            this.first_name = first_name;
-            this.last_name = last_name;
+            this.id = id,
+            this.firstName = firstName;
+            this.lastName = lastName;
             this.age = age;
-            this.feet = feet;
-            this.inches = inches;
+            this.height_feet = height_feet;
+            this.height_inch = height_inch;
             this.email = email;
         }
 }

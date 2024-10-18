@@ -12,7 +12,11 @@ export class Team {
     teamName: string
 
     @Column()
-    coachName: string
+    coachFirstName: string
+
+    @Column()
+    coachLastName: string
+
 
     @OneToMany(() => Player, (player) => {player.team})
     players: Player[]
